@@ -55,7 +55,7 @@ public class BookController {
         map.put(id, new Book(id, "Default name", "Default Author"));
     }
 	
-	@RequestMapping(method = RequestMethod.GET, produces={MediaType.APPLICATION_JSON_VALUE, MediaType.TEXT_XML_VALUE})
+	@RequestMapping(method = RequestMethod.GET, produces={MediaType.APPLICATION_JSON_VALUE})
     public List<Book> getBooks() {
         return new ArrayList<Book>(map.values());
     }

@@ -1,6 +1,13 @@
 package com.asif.model;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name="myRootTag")
 public class Book {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	long id;
 	String name;
 	String author;

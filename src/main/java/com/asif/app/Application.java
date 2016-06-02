@@ -24,19 +24,19 @@ public class Application extends SpringBootServletInitializer {
         SpringApplication.run(Application.class, args);
     }   
     
-    @Bean
-    public MappingJackson2HttpMessageConverter jsonConverter() {
-        MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
-        SimpleModule simpleModule = new SimpleModule();
-        simpleModule.addSerializer(String.class, new StringSerializer());
-        ObjectMapper mapper = new ObjectMapper()
-            .registerModule(simpleModule);
-        converter.setObjectMapper(mapper);
-        return converter;
-    }
+//    @Bean
+//    public MappingJackson2HttpMessageConverter jsonConverter() {
+//        MappingJackson2HttpMessageConverter converter = new MappingJackson2HttpMessageConverter();
+//        SimpleModule simpleModule = new SimpleModule();
+//        simpleModule.addSerializer(String.class, new StringSerializer());
+//        ObjectMapper mapper = new ObjectMapper()
+//            .registerModule(simpleModule);
+//        converter.setObjectMapper(mapper);
+//        return converter;
+//    }
 
-    @Bean
-    public Jaxb2RootElementHttpMessageConverter jaxbConverter() {
-        return new Jaxb2RootElementHttpMessageConverter();
-    }
+//    @Bean
+//    public Jaxb2RootElementHttpMessageConverter jaxbConverter() {
+//        return new Jaxb2RootElementHttpMessageConverter();
+//    }
 }

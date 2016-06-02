@@ -38,6 +38,11 @@
 	    <artifactId>spring-oxm</artifactId>
 	    <version>4.2.6.RELEASE</version>
 	</dependency>-->
+	<dependency>
+	    <groupId>com.fasterxml.jackson.dataformat</groupId>
+	    <artifactId>jackson-dataformat-xml</artifactId>
+	</dependency>
+	
     
   	<dependency>
         <groupId>com.jayway.jsonpath</groupId>
