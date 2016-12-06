@@ -13,8 +13,10 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.http.converter.xml.Jaxb2RootElementHttpMessageConverter;
 
 import com.asif.configuration.BaseConfiguration;
+import com.asif.model.Enrollment;
 import com.asif.model.Offer;
 import com.asif.model.Student;
+import com.asif.model.Term;
 import com.asif.repositories.BookRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;
@@ -34,6 +36,13 @@ public class Application extends SpringBootServletInitializer {
         Offer o = (Offer) context.getBean(Offer.class);
         System.out.println(o.getStudent());
         System.out.println(o.getCourse());
+        
+        Term t1 = (Term)context.getBean("term11");
+        System.out.println(t1);
+        
+        Enrollment e = (Enrollment)context.getBean(Enrollment.class);
+        System.out.println(e);
+    
     }   
     
 //    @Bean

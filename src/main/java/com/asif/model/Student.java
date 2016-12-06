@@ -3,7 +3,7 @@ package com.asif.model;
 import org.springframework.stereotype.Component;
 
 @Component("studentOne")
-public class Student {
+public class Student implements Model{
 	private String id;
 	private String name;
 	

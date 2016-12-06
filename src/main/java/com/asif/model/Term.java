@@ -1,17 +1,19 @@
 package com.asif.model;
 
+import java.util.List;
+
 import org.springframework.stereotype.Component;
 
 @Component
-public class Course implements Model {
+public class Term implements Model {
 	private String id;
 	private String name;
+	private List<Course> courses;
 	
-	public Course() {
+	public Term() {
 		super();
 	}
-	
-	public Course(String id, String name) {
+	public Term(String id, String name) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -27,10 +29,21 @@ public class Course implements Model {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}	
+	}
+	public List<Course> getCourses() {
+		return courses;
+	}
+	public void setCourses(List<Course> courses) {
+		this.courses = courses;
+	}
 	
 	@Override
 	public String toString() {
-		return "ID = " + id + ", Name = " + name;
+		String s =  "ID = " + id + ", Name = " + name;
+		s += "\n\r Courses:";
+		for(Course c : courses) {
+			s += "\n\r\t " + c;
+		}
+		return s;
 	}
 }
