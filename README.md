@@ -1,2 +1,2 @@
 # spring-rest
-Experimentation with spring framework and REST
+Experimentation with spring framework, spring boot and REST.
