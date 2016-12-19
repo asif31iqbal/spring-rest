@@ -1,0 +1,30 @@
+app:
+  org: buet
+  year: 2002
+  dept: cse
+  faculty: eee
+  students:
+    - id: 001
+      name: asif
+    - id: 002
+      name: jamil
+  city: dhaka
+  country: bangladesh
+  established: 1961
+  depts:
+    - cse
+    - eee
+    - me
+    - ipe
+    - wre
+    - ce
+    - che
+    - name
+    - arch
+    - urp
+    - mte
+  dataSource:
+    userName: root
+    password: Dev@s031
+    url: jdbc:mysql://localhost:3306/test?profileSQL=false
+    drivaerClassName: com.mysql.jdbc.Driver

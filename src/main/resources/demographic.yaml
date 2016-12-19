@@ -1,0 +1,16 @@
+app:
+  city: dhaka
+  country: Bangladesh
+  established: 1961
+  depts:
+    - cse
+    - eee
+    - me
+    - ipe
+    - wre
+    - ce
+    - che
+    - name
+    - arch
+    - urp
+    - mte
