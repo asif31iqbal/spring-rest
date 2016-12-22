@@ -40,7 +40,7 @@ public class BaseConfiguration {
 		transactionManager.setDataSource(dataSource);
 	}
 	
-	@Bean
+	@Bean(name="transactionManager")
 	public DataSourceTransactionManager getTransactionManager() {
 		return transactionManager;
 	}

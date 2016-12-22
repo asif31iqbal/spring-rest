@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
@@ -37,7 +38,7 @@ import com.fasterxml.jackson.databind.ser.std.StringSerializer;
 @SpringBootApplication
 @EnableScheduling
 @ComponentScan(basePackages = {"com.asif"})
-
+@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 public class Application extends SpringBootServletInitializer {
 	
     @Override
@@ -67,7 +68,7 @@ public class Application extends SpringBootServletInitializer {
         //System.out.println(p.getOrg());
     }   
     
-    @Scheduled(fixedRate = 20000)
+    //@Scheduled(fixedRate = 20000)
     public void reportCurrentTime() {      
     	BaseConfiguration cp = (BaseConfiguration)context.getBean(BaseConfiguration.class);
     	System.out.println(cp.getPropertyConfig().getOrg());
